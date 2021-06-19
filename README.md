@@ -831,3 +831,6 @@ Then we need to start the app:
 
     $ php artisan serve
 The app should be running on http://127.0.0.1:8000. Then we can start to test it out.
+
+##Conclusion
+In this tutorial, I am sharing how to use React in a Laravel application. I'm also using how to display Laravel validation error messages in a React component.
