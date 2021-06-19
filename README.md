@@ -281,6 +281,7 @@ Next, let’s create the app.blade.php view file. We’ll create this file direc
     </html>
 
 ##Creating the App componnet
+
 The App component will serve as the base for our React components. Let’s rename the default Example component to App and replace it content with the following code:
 
     // resources/js/components/App.js
@@ -538,13 +539,13 @@ From the ProjectsList component, you’ll notice we have a link to create a new 
     export default NewProject
 
 
-This component renders a form for creating a new project. We define some states: name, description and errors. Then we define a handleFieldChange method that gets called whenever the create a new project form input fields changes. Base on these changes, we update the states (name and description) accordingly. For this to work, we add an onChange event to each of the field.
+This component renders a form for creating a new project. We define some states: name, description and errors. Then we define a **handleFieldChange** method that gets called whenever the create a new project form input fields changes. Base on these changes, we update the states (name and description) accordingly. For this to work, we add an onChange event to each of the field.
 
-Once the form is submitted, a handleCreateNewProject method is called, which first prevents the default behavior of form submission. Then it makes an HTTP request to our app API endpoint passing along the form data. If everything went well, we simply redirect the user to the homepage. otherwise, we update the errors state with the response error gotten from our app API.
+Once the form is submitted, a **handleCreateNewProject** method is called, which first prevents the default behavior of form submission. Then it makes an HTTP request to our app API endpoint passing along the form data. If everything went well, we simply redirect the user to the homepage. otherwise, we update the errors state with the response error gotten from our app API.
 
-The hasErrorFor method checks if the specified field has an error or not, and will either return true or false. The renderErrorFor method renders the error message for the specified field, if the field has error.
+The **hasErrorFor** method checks if the specified field has an error or not, and will either return true or false. The **renderErrorFor** method renders the error message for the specified field, if the field has error.
 
-Just as we did with the ProjectsList component, let’s add the NewProject component to the App component. Update the App component as below:
+Just as we did with the **ProjectsList** component, let’s add the **NewProject** component to the App component. Update the App component as below:
 
     // resources/js/components/App.js
 
