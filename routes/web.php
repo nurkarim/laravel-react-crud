@@ -21,8 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/{path?}', [
-    'uses' => 'HomeController@mainIndex',
-    'as' => 'react',
-    'where' => ['path' => '.*']
-]);
+//Route::get('/{path?}', [
+//    'uses' => 'HomeController@mainIndex',
+//    'as' => 'react',
+//    'where' => ['path' => '.*']
+//]);
+
+Route::view('/{path?}', 'welcome');
